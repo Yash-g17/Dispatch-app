@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 7in;
+    width: 5in;
+}
+#super{
+    
+    background-color: lightgray;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#lets-see{
+    display: flex;
+}
+/* default for all pages */ 
+@page { 
+    size: 6in;
+    margin: 2in;     
+} 
+#super{
+    display: flex;
+    flex-direction: column;
+}
+#lets-see{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+#data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    line-height: 1.4;
+}
+/* margin on left page */ 
+@page :left { 
+    margin: 1in;     
+} 
+  
+/* margin on right page */ 
+@page :right { 
+    margin: 3in;     
+} 
+  
+/* top margin on first page */ 
+h1{ 
+    color:green; 
+} 
