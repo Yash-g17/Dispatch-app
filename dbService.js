@@ -72,5 +72,21 @@ class DbService {
             console.log(err);
         }
     }
+    async product_dispatched(prod_id, biller_code) {
+        try {
+            const update_status = await new Promise((resolve, reject) => {
+                const query = `UPDATE names SET status = '${biller_code}' WHERE id='${prod_id}'`;
+                connection.query(query, (err, result) => {
+                    if (err) {
+                        reject(new Error(err.message));
+                    }
+                    resolve(result);
+                });
+            });
+        } catch (err) {
+            res.status(502).end;
+            console.log(err + `${prod_id} was not changed`);
+        }
+    }
 }
 module.exports = DbService;

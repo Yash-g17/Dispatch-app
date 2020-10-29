@@ -6,140 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="label.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <script src="./davidshimjs-qrcodejs-04f46c6/qrcode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="./dispatch-page.css">
-    <link rel="shortcut icon" href="">
+    <link rel="shortcut icon" href="./bruh.jpg">
 </head>
 
+<body>
+    <!-- Button to Open the Modal -->
+    <button type="button" style="display: none;" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="openModal">
+     Open modal
+    </button>
 
-</html>
-    <div id="super">  
-        <div id="lets-see">
-            <h2>Hello World</h1>
-        </div>
-        <div id="data">
-            <div id="data1">
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-               
-            </div>
-            <div id="data2">
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                
-            </div>
-            <div id="data3">
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>                
-        
-            </div>
-            <div id="data4">
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
-                192.78    <br>        
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Select Dispatch Client</h4>
+                    <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="billerNameSelector">Select list (select one):</label>
+                            <select class="form-control" id="billerNameSelector">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button id="billerNameSelected" type="button" class="btn btn-danger" data-dismiss="modal">Select</button>
+                </div>
+
             </div>
         </div>
     </div>
-<script src="./dispatch-client.js "></script>
+    <br>
+    <div id="super" class="container-fluid">
+
+        <div class="row" id='row'>
+            <div class="col" id="col1"><button id="print" class="btn btn-primary">Print</button></div>
+            <div id="bill">
+                <h2 style="display: block;">
+                    <center id="billerName">Hello World</center>
+                </h2>
+                <table id="data">
+                    <tr id="row0"></tr>
+                    <tr id="row1"></tr>
+                    <tr id="row2"></tr>
+                    <tr id="row3"></tr>
+                    <tr id="row4"></tr>
+                    <tr id="row5"></tr>
+                    <tr id="row6"></tr>
+                    <tr id="row7"></tr>
+                    <tr id="row8"></tr>
+                    <tr id="row9"></tr>
+                    <tr id="row10"></tr>
+                    <tr id="row11"></tr>
+                    <tr id="row12"></tr>
+                    <tr id="row13"></tr>
+                    <tr id="row14"></tr>
+                    <tr id="row15"></tr>
+                    <tr id="row16"></tr>
+                    <tr id="row17"></tr>
+                    <tr id="row18"></tr>
+                    <tr id="row19"></tr>
+                    <tr id="row20"></tr>
+                    <tr id="row21"></tr>
+                    <tr id="row22"></tr>
+                    <tr id="row23"></tr>
+                    <tr id="row24"></tr>
+                    <tr id="row25"></tr>
+                    <tr id="row26"></tr>
+                    <tr id="row27"></tr>
+                    <tr id="row28"></tr>
+                    <tr id="row29"></tr>
+                    <tr id="row30"></tr>
+                </table>
+            </div>
+            <div class="col" id="col2"></div>
+
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <script src="./dispatch-client.js "></script>
 </body>
 
 </html>
